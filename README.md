@@ -2,6 +2,8 @@ YouTube Channel Analytics (API + SQL + Power BI)
 
 This project extracts public YouTube channel data using the YouTube Data API, stores the cleaned dataset in a SQL database, and builds an analytical dashboard in Power BI to uncover trends in views, engagement, uploads, and category performance.
 
+<img width="1489" height="855" alt="image" src="https://github.com/user-attachments/assets/4281a987-e152-44da-ab6f-bff95a84149c" />
+
  Project Workflow
 
   --> YouTube API Extraction
