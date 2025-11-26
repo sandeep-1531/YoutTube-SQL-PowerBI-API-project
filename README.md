@@ -100,6 +100,6 @@ Category Upload Trend + Likes Trend (Dual Axis)
 
 📎 View full dashboard:
 YouTube Channel Analytics Dashboard.pdf
-✅ a better architecture diagram (SVG style)
+a better architecture diagram (SVG style)
 
 Just tell me!
