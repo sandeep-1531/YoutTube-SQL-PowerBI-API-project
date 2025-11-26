@@ -1,105 +1,141 @@
- Dataset Structure
+YouTube Channel Analytics (API + SQL + Power BI)
 
-This project outputs two main tables:
+This project extracts public YouTube channel data using the YouTube Data API, stores the cleaned dataset in a SQL database, and builds an analytical dashboard in Power BI to uncover trends in views, engagement, uploads, and category performance.
 
-Fact Table — vw_thinkmedia_metrics
+ Project Workflow
 
-Contains video-level performance metrics:
+  --> YouTube API Extraction
 
-view_count
+       - Fetch public video statistics (views, likes, comments, tags, publish date, category, etc.)
 
-like_count
+        - Convert raw JSON into structured rows.
 
-comment_count
+--> SQL Database (Data Cleaning + Modeling)
 
-engagement_rate
+     - Load raw data into SQL tables.
 
-tags_count
+     - Clean and normalize the dataset.
 
-title_length
+     - Build a Star Schema model:
 
-views_per_day
+            - Fact Table: vw_thnkmedia_metrics
 
-published_at
+            - Dimension Table: category_dim
 
-category_id
+--> Power BI Dashboard
 
-Dimension Table — category_dim
+      - Connect SQL to Power BI
 
-Contains category metadata:
+      - Build KPIs, category-level visuals, trend analysis, and combined insights.
 
-category_id
+Dataset Structure
+    --> Fact Table — vw_thikmedia_metrics
 
-category_name
+          - Contains video-level metrics:
 
-➡ Modeled as a Star Schema inside Power BI.
+           - view_count
 
-Project Architecture
+           - like_count
 
-A clean GitHub-friendly architecture diagram:
+           - comment_count
 
-          ┌──────────────────────┐
-          │  YouTube Data API    │
-          │  (Public Video Stats)│
-          └────────────┬─────────┘
-                       │
-                       ▼
-              Raw API JSON Data
-                       │
-                       ▼
-          ┌────────────────────────┐
-          │      SQL Database      │
-          │ (Cleaned Fact + Dim)   │
-          └────────────┬───────────┘
-                       │
-                       ▼
-                Star Schema Model
-                       │
-                       ▼
-          ┌────────────────────────┐
-          │        Power BI        │
-          │   Dashboards + KPIs    │
-          └────────────────────────┘
+           - engagement_rate
 
- Dashboard Features
-1. Key KPIs (Top Row)
+           - tags_count
 
-Total Videos
+           - title_length
 
-Avg Views per Day
+           - views_per_day
 
-Avg Engagement Rate
+           - published_at
 
-Avg Video Duration
+           - category_id
 
-Most Active Category
+  --> Dimension Table — category_dim
+
+          - category_id
+
+           - category_name
+
+This creates a Star Schema used inside Power BI.
+
+Architecture Diagram
+YouTube Data API (Public Statistics)
+                |
+                v
+          Raw JSON Data
+                |
+                v
+         SQL Database
+   - Raw tables
+   - Cleaned fact and dim tables
+                |
+                v
+        Power BI Desktop
+   - Data model (Star Schema)
+   - Visualizations & Insights
+
+Dashboard Features
+1. Key KPIs
+
+     - Total uploaded videos
+   
+     - Average views per day
+   
+     - Average engagement rate
+   
+     - Average video duration
+   
+     - Most active category
 
 2. Category-Level Visuals
 
-Video Category by Year
+     - Video Category by Year
+   
+     - Engagement by Category
+   
+     - Video Uploads by Category
+   
+     - Most Active Categories
 
-Engagement by Category
+3. Video-Level Visuals
 
-Video Uploads by Category
+     - Top Videos by Average Daily Views
+   
+     - Likes by Category
+   
+     - Tags Count by Category
 
-Most Active Categories
+4. Combined Trend
 
-3. Video-Level Analysis
+    - Category uploads and likes over time (dual-axis chart)
 
-Top Videos by Average Daily Views
+Dashboard Output (PDF)
 
-Tags Count by Category
+A full Power BI dashboard PDF is included in the repository: YouTube Channel Analytics Dashboard.pdf
+The PDF contains all KPI cards and visual insights.
 
-Likes by Category
+Key Insights
 
-4. Combined Trend Charts
+     - Entertainment category dominates in views, engagement, and uploads.
+   
+     - People & Blogs has one of the highest average likes.
+   
+     - Uploads peaked in 2023.
 
-Category Upload Trend + Likes Trend (Dual Axis)
+Education category maintains strong consistency with stable engagement.
 
-📄 Dashboard PDF
+Some low-upload categories show high engagement, indicating potential opportunity.
 
-📎 View full dashboard:
-YouTube Channel Analytics Dashboard.pdf
-a better architecture diagram (SVG style)
+Technologies Used
 
-Just tell me!
+YouTube Data API
+
+SQL (Data Cleaning & Modeling)
+
+Power BI (Visualization & Reporting)
+
+Author
+
+Created by Sandeep K.M.
+Portfolio: https://github.com/sandeep-1531
