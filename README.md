@@ -123,19 +123,18 @@ Key Insights
    
      - Uploads peaked in 2023.
 
-Education category maintains strong consistency with stable engagement.
+     - Education category maintains strong consistency with stable engagement.
 
-Some low-upload categories show high engagement, indicating potential opportunity.
+     - Some low-upload categories show high engagement, indicating potential opportunity.
 
 Technologies Used
 
-YouTube Data API
+   YouTube Data API
 
-SQL (Data Cleaning & Modeling)
+   SQL (Data Cleaning & Modeling)
 
-Power BI (Visualization & Reporting)
+   Power BI (Visualization & Reporting)
 
 Author
-
 Created by Sandeep K.M.
 Portfolio: https://github.com/sandeep-1531
